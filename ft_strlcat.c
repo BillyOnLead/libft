@@ -6,7 +6,7 @@
 /*   By: azari <azari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 08:52:27 by azari             #+#    #+#             */
-/*   Updated: 2022/10/13 12:11:09 by azari            ###   ########.fr       */
+/*   Updated: 2022/10/16 17:09:01 by azari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,12 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 }
 // int main()
 // {       
-// //         char dst1[20] = "VIGIL";
-// //         char dst2[20] = "VIGIL";
-// //         char src1[] = "707";
-// //         char src2[] = "707";        
-// //         printf("%zu | ", strlcat(dst1, src1, 5));
-// //         printf("%s\n", dst1);
-// //         printf("%zu | ", ft_strlcat(dst2, src2, 5));
-// //         printf("%s\n", dst2);
+//         // char dst1[20] = "VIGIL";
+//         // char dst2[20] = "VIGIL";
+//         char src1[] = "707";
+//         char src2[] = "707";        
+//         printf("%zu | ", strlcat(NULL, src1, 5));
+//         // printf("%s\n", dst1);
+//         // printf("%zu | ", ft_strlcat(NULL, src2, 5));
+//         // printf("%s\n", dst2);
 // }

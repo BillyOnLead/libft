@@ -1,36 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azari <azari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/08 08:45:48 by azari             #+#    #+#             */
-/*   Updated: 2022/10/16 15:20:28 by azari            ###   ########.fr       */
+/*   Created: 2022/10/16 16:14:15 by azari             #+#    #+#             */
+/*   Updated: 2022/10/16 21:03:41 by azari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *hay, const char *ndl, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
+	char	*ptr;
+	size_t	len1;
+	size_t	len2;
 	size_t	i;
 	size_t	j;
 
-	i = 0;
+	i = -1;
 	j = 0;
-	if (ndl[j] == '\0')
-		return ((char *)hay);
-	while (i < len && hay[i])
+	if (!s1 || !s2)
+		return (0);
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
+	ptr = (char *)malloc((len1 + len2 + 1) * sizeof(char));
+	if (!ptr)
+		return (0);
+	while (++i < len1)
+		ptr[i] = s1[i];
+	while (j < len2)
 	{
-		j = 0;
-		while (hay[i + j] == ndl[j] && i + j < len)
-		{
-			if (!ndl[j + 1])
-				return ((char *)&hay[i]);
-			j++;
-		}
+		ptr[i] = s2[j];
 		i++;
+		j++;
 	}
-	return (0);
+	ptr[i] = '\0';
+	return (ptr);
 }
+// int main()
+// {
+// 	char s[] = "42";
+// 	char y[] = "";
+// 	printf("%s", ft_strjoin(s, y));
+// }

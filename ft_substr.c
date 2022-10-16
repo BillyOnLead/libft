@@ -6,7 +6,7 @@
 /*   By: azari <azari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 14:52:47 by azari             #+#    #+#             */
-/*   Updated: 2022/10/13 19:08:05 by azari            ###   ########.fr       */
+/*   Updated: 2022/10/16 16:05:38 by azari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (s)
 	{
 		lens = ft_strlen(s);
+		if (len > lens)
+			len = lens;
 		sub = (char *)malloc((len + 1) * sizeof(char));
 		if (!sub)
 			return (0);
