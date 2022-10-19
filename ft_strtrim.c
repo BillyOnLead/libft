@@ -6,7 +6,7 @@
 /*   By: azari <azari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 08:02:23 by azari             #+#    #+#             */
-/*   Updated: 2022/10/18 11:07:42 by azari            ###   ########.fr       */
+/*   Updated: 2022/10/19 21:41:23 by azari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	if (!s1 || !set)
 		return (NULL);
-	while (s1[i] && check(set, s1[i]))
+	while (s1[i] != '\0' && check(set, s1[i]))
 		i++;
+	if (i == ft_strlen(s1))
+	{
+		t = (char *)malloc(sizeof(char));
+		t[0] = '\0';
+		return (t);
+	}
 	j = i;
 	i = ft_strlen(s1) - 1;
 	while (i >= 0 && check(set, s1[i]))
