@@ -1,45 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azari <azari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/17 08:02:23 by azari             #+#    #+#             */
-/*   Updated: 2022/10/18 11:07:42 by azari            ###   ########.fr       */
+/*   Created: 2022/10/19 11:54:36 by azari             #+#    #+#             */
+/*   Updated: 2022/10/19 13:24:54 by azari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check(char const *s, int c)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int	i;
-
-	i = -1;
-	while (s[++i])
+	if (n == -2147483648)
 	{
-		if (s[i] == (char)c)
-			return (1);
+		ft_putchar_fd('-', fd);
+		ft_putchar_fd('2', fd);
+		n = 147483648;
 	}
-	return (0);
-}
-
-char	*ft_strtrim(char const *s1, char const *set)
-{
-	char	*t;
-	size_t	i;
-	size_t	j;
-
-	i = 0;
-	if (!s1 || !set)
-		return (NULL);
-	while (s1[i] && check(set, s1[i]))
-		i++;
-	j = i;
-	i = ft_strlen(s1) - 1;
-	while (i >= 0 && check(set, s1[i]))
-		i--;
-	t = ft_substr(s1, j, i - j + 1);
-	return (t);
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		n *= -1;
+	}
+	if (n >= 10)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
+	else
+		ft_putchar_fd(n + 48, fd);
 }

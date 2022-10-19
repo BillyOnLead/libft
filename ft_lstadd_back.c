@@ -1,45 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azari <azari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/17 08:02:23 by azari             #+#    #+#             */
-/*   Updated: 2022/10/18 11:07:42 by azari            ###   ########.fr       */
+/*   Created: 2022/10/19 13:51:49 by azari             #+#    #+#             */
+/*   Updated: 2022/10/19 14:18:56 by azari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check(char const *s, int c)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	int	i;
+	t_list	*temp;
 
-	i = -1;
-	while (s[++i])
+	if (!*lst)
 	{
-		if (s[i] == (char)c)
-			return (1);
+		*lst = new;
+		return ;
 	}
-	return (0);
-}
-
-char	*ft_strtrim(char const *s1, char const *set)
-{
-	char	*t;
-	size_t	i;
-	size_t	j;
-
-	i = 0;
-	if (!s1 || !set)
-		return (NULL);
-	while (s1[i] && check(set, s1[i]))
-		i++;
-	j = i;
-	i = ft_strlen(s1) - 1;
-	while (i >= 0 && check(set, s1[i]))
-		i--;
-	t = ft_substr(s1, j, i - j + 1);
-	return (t);
+	temp = *lst;
+	while (temp->next)
+		temp = temp->next;
+	temp->next = new;
+	new->next = NULL;
 }
