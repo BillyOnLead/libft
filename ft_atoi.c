@@ -6,7 +6,7 @@
 /*   By: azari <azari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 07:28:43 by azari             #+#    #+#             */
-/*   Updated: 2022/10/13 11:00:49 by azari            ###   ########.fr       */
+/*   Updated: 2022/10/20 10:54:40 by azari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,3 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-// int main()
-// {
-// 	printf("%d\n", ft_atoi("-+42"));
-// 	printf("%d\n", atoi("-+42"));
-// }

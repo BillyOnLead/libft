@@ -6,7 +6,7 @@
 /*   By: azari <azari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 10:39:01 by azari             #+#    #+#             */
-/*   Updated: 2022/10/16 18:24:18 by azari            ###   ########.fr       */
+/*   Updated: 2022/10/20 10:54:12 by azari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,3 @@ int	ft_strncmp(const char *dst, const char *src, size_t n)
 	i++;
 	return ((unsigned char)dst[i] - (unsigned char)src[i]);
 }
-
-// int main()
-// {
-//         // printf("%d\n", strncmp("VIGIL","t" + 50, 6));
-//         // printf("%d\n", ft_strncmp("VIGIL","VIgIL", 6));
-// }

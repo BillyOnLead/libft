@@ -6,7 +6,7 @@
 /*   By: azari <azari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 17:23:01 by azari             #+#    #+#             */
-/*   Updated: 2022/10/13 13:26:33 by azari            ###   ########.fr       */
+/*   Updated: 2022/10/20 10:54:29 by azari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,3 @@ int	ft_tolower(int c)
 	else
 		return (c);
 }
-
-// int	main()
-// {
-// 	// int i;
-// 	// int j;
-// 	// i = tolower('@');
-// 	// printf("%c\n", i);
-
-// 	// j = ft_tolower('@');
-// 	// printf("%c", j);
-// }

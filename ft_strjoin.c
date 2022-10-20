@@ -6,7 +6,7 @@
 /*   By: azari <azari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 16:14:15 by azari             #+#    #+#             */
-/*   Updated: 2022/10/16 21:03:41 by azari            ###   ########.fr       */
+/*   Updated: 2022/10/20 10:53:58 by azari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ptr[i] = '\0';
 	return (ptr);
 }
-// int main()
-// {
-// 	char s[] = "42";
-// 	char y[] = "";
-// 	printf("%s", ft_strjoin(s, y));
-// }

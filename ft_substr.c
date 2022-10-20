@@ -6,7 +6,7 @@
 /*   By: azari <azari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 14:52:47 by azari             #+#    #+#             */
-/*   Updated: 2022/10/16 16:05:38 by azari            ###   ########.fr       */
+/*   Updated: 2022/10/20 11:01:55 by azari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	return (0);
 }
-
-// int main()
-// {
-//     char *str = "01234";
-//     size_t size = 10;
-//     char *ret = ft_substr(str, 10, size);
-// 	printf("%s", ret);
-// }

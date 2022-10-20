@@ -6,7 +6,7 @@
 /*   By: azari <azari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 16:06:15 by azari             #+#    #+#             */
-/*   Updated: 2022/10/13 11:42:53 by azari            ###   ########.fr       */
+/*   Updated: 2022/10/20 11:01:21 by azari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,3 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-// int main()
-// {
-// 	// int i;
-// 	// int j;
-// 	// int x = 'c';
-// 	// i = isalpha('i');
-// 	// j = ft_isalpha('i');
-
-// 	// printf("%d\n", i);
-// 	// printf("%d\n", j);
-// 	// printf("%d",x);
-// }

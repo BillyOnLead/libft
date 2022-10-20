@@ -6,7 +6,7 @@
 /*   By: azari <azari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 12:53:11 by azari             #+#    #+#             */
-/*   Updated: 2022/10/13 11:40:28 by azari            ###   ########.fr       */
+/*   Updated: 2022/10/20 10:54:48 by azari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,3 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(ptr, count * size);
 	return (ptr);
 }
-// int main()
-// {
-
-// }

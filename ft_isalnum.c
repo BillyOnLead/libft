@@ -6,7 +6,7 @@
 /*   By: azari <azari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 17:31:06 by azari             #+#    #+#             */
-/*   Updated: 2022/10/13 11:41:44 by azari            ###   ########.fr       */
+/*   Updated: 2022/10/20 11:01:30 by azari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,3 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-// int main()
-// {
-// 	// int i;
-// 	// int j;
-
-// 	// i = isalnum('1');
-// 	// printf("%d\n", i);
-
-// 	// j = ft_isalnum ('1');
-// 	// printf("%d", j);
-// 	// return (0);
-// }

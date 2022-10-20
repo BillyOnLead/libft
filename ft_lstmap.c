@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azari <azari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/08 13:06:18 by azari             #+#    #+#             */
-/*   Updated: 2022/10/20 10:53:32 by azari            ###   ########.fr       */
+/*   Created: 2022/10/20 08:27:13 by azari             #+#    #+#             */
+/*   Updated: 2022/10/20 09:48:57 by azari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	unsigned char	*ptr_d;
-	unsigned char	*ptr_s;
-	size_t			i;
-
-	i = -1;
-	ptr_d = (unsigned char *)dst;
-	ptr_s = (unsigned char *)src;
-	if ((!ptr_d && !ptr_s) && n > 0)
+	t_list	*temp;
+	t_list	*new;
+	
+	if (!lst || !f || !del)
 		return (NULL);
-	while (++i < n)
-	(*ptr_d++) = (*ptr_s++);
-	return (dst);
+	temp = lst;
+	while (temp)
+	{
+		
+	}
+	
 }
