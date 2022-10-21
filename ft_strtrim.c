@@ -6,13 +6,13 @@
 /*   By: azari <azari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 08:02:23 by azari             #+#    #+#             */
-/*   Updated: 2022/10/19 21:41:23 by azari            ###   ########.fr       */
+/*   Updated: 2022/10/21 12:56:02 by azari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check(char const *s, int c)
+static int	check(char const *s, int c)
 {
 	int	i;
 

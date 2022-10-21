@@ -6,13 +6,13 @@
 /*   By: azari <azari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 09:39:34 by azari             #+#    #+#             */
-/*   Updated: 2022/10/18 11:08:35 by azari            ###   ########.fr       */
+/*   Updated: 2022/10/21 13:42:24 by azari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count(const char *s, int c)
+static int	count(const char *s, int c)
 {
 	int	i;
 	int	count;
@@ -27,11 +27,15 @@ int	count(const char *s, int c)
 	return (count);
 }
 
-void	free_str(char **str, int cnt)
+static char	**free_str(char **str, int cnt)
 {
-	while (cnt)
-		free(str[cnt--]);
+	while (cnt > 0)
+	{
+		cnt--;
+		free(str[cnt]);
+	}
 	free(str);
+	return (NULL);
 }
 
 char	**ft_split(const char *s, char c)
@@ -57,7 +61,7 @@ char	**ft_split(const char *s, char c)
 			i++;
 		ptr[cnt] = ft_substr(s, j, i - j);
 		if (!ptr[cnt])
-			free_str(ptr, cnt);
+			return (free_str(ptr, cnt));
 	}
 	ptr[cnt] = 0;
 	return (ptr);

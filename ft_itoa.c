@@ -6,13 +6,13 @@
 /*   By: azari <azari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:26:25 by azari             #+#    #+#             */
-/*   Updated: 2022/10/20 10:55:20 by azari            ###   ########.fr       */
+/*   Updated: 2022/10/21 12:12:13 by azari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_digits(long c)
+static int	count_digits(long c)
 {
 	int	i;
 
