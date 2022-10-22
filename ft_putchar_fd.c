@@ -6,11 +6,12 @@
 /*   By: azari <azari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 11:36:04 by azari             #+#    #+#             */
-/*   Updated: 2022/10/20 10:26:12 by azari            ###   ########.fr       */
+/*   Updated: 2022/10/22 11:53:17 by azari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <fcntl.h> 
 
 void	ft_putchar_fd(char c, int fd)
 {

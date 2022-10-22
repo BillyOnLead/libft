@@ -6,7 +6,7 @@
 /*   By: azari <azari@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 09:30:48 by azari             #+#    #+#             */
-/*   Updated: 2022/10/20 10:53:38 by azari            ###   ########.fr       */
+/*   Updated: 2022/10/22 11:48:45 by azari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	char		*dp;
 	const char	*sp;
 
-	if (!src && !dst)
+	if (src == dst)
 		return (NULL);
 	if (src < dst)
 	{
